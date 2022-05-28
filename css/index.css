@@ -1,0 +1,135 @@
+ body {
+     background-color: black;
+ }
+
+ .sign {
+     width: 500px;
+     margin-top: 100px;
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px solid black;
+     border-radius: 50px;
+     height: 500px;
+     overflow: hidden;
+     background-color: #143355;
+
+ }
+
+ .sign .container .box_header {
+     display: grid;
+     grid-template-columns: repeat(2, minmax(250px, 1fr));
+ }
+
+
+ button {
+     width: 250px;
+     text-align: center;
+     background: none;
+     padding: 15px 0;
+     font-size: x-large;
+     border: none;
+     border-bottom: 1px solid;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: lighter;
+     background-color: #7fffd41c;
+     cursor: pointer;
+     color: white;
+ }
+
+ button:hover {
+     background-color: #147662;
+ }
+
+
+
+
+ .signup .form1 label {
+     display: block;
+     margin-right: 30px;
+     width: 15%;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: x-large;
+     font-weight: lighter;
+     color: white;
+
+ }
+
+
+ .signup .form1 input {
+     width: 60%;
+     border-radius: 4px;
+ }
+
+ .form1 {
+     padding: 20px;
+ }
+
+ .form {
+     display: flex;
+     margin-bottom: 20px;
+     margin-top: 40px;
+ }
+
+ .submit {
+     text-align: center;
+
+ }
+
+ .submit input {
+     background: none;
+     padding: 5px 30px;
+     border-radius: 5px;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: x-large;
+     font-weight: lighter;
+     background-color: #147662;
+     cursor: pointer;
+ }
+
+
+
+ .login form label {
+     display: block;
+     margin-right: 30px;
+     width: 15%;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: x-large;
+     font-weight: lighter;
+     color: white;
+ }
+
+
+ .login form input {
+     width: 60%;
+     border-radius: 4px;
+ }
+
+
+ .form2 {
+     padding: 20px;
+     /* display: none; */
+ }
+
+ .form3 {
+     display: flex;
+     margin-bottom: 20px;
+     margin-top: 40px;
+ }
+
+ .log {
+
+     text-align: center;
+     /* display: none; */
+
+ }
+
+ .log input {
+     background: none;
+     padding: 5px 30px;
+     border-radius: 5px;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: x-large;
+     font-weight: lighter;
+     background-color: #147662;
+     cursor: pointer;
+ }

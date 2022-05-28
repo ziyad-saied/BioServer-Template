@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Form</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.js">
+
+</head>
+
+
+<body>
+
+
+    <!-- Biological Function Form Start -->
+    <form action="#" class="Biolgical">
+        <fieldset>
+            <legend>Biological Functions</legend>
+
+            <p><u>De-Bruijn</u></p>
+            <div class="de_bruijn_box">
+                <!-- The left Box Start -->
+                <div class="choose_show">
+                    <label for="choose_file">Choose The Sequence</label>
+                    <label class="choose_file_button" for="choose_file">Choose File</label>
+                    <input type="file" id="choose_file" name="choose_file" style="display: none;">
+                    <br><br>
+                    <textarea id="new_sequence" style="resize: none;" rows="10" cols="50"
+                        placeholder="text will appear here">
+                        </textarea>
+                </div>
+                <!-- The left Box End -->
+
+                <!-- The Middle Box Generate Button Start   -->
+                <div class="button_generate">
+                    <input type="button" value="generate">
+                </div>
+                <!-- The Middle Box Generate Button End  -->
+
+                <!-- The left box Start  -->
+                <div class="generate_sequence">
+                    <label for="genome">The New Genome</label>
+                    <br><br>
+                    <textarea style="resize: none;" name="genome" id="genome" cols="50" rows="10"></textarea>
+                </div>
+                <!-- The left box End  -->
+
+            </div>
+
+
+            <hr style="color: gray;">
+
+            <!-- The left Box Start -->
+            <div class="choose_show1">
+                <label class="choose_file_button" for="choose_file2">Choose File</label>
+                <label for="choose_file2">Choose New Sequence Or work with The New Genome</label>
+                <input type="file" id="choose_file2" name="choose_file2" style="display: none;">
+                <br><br>
+                <textarea style="resize: none;" name="new_sequence2" id="new_sequence2" rows="10" cols="70"
+                    placeholder="text will appear here">
+                        </textarea>
+            </div>
+            <!-- The left Box End -->
+
+
+            <div class="Biological_box">
+                <!-- The N Box Start -->
+                <div class="n">
+
+                    <!-- The Button When Click Remove 'N' from Gene -->
+                    <input id="N_remove" type="button" value="Remove N Bases " name="N_remove">
+                    <!-- End Button -->
+                    <br>
+                    <!-- Gene after remove 'N'-->
+                    <output id="N_Output"></output>
+
+                </div>
+                <!-- The N Box End -->
+
+
+                <!-- The Kmers Box Start -->
+                <div class="k">
+
+                    <!-- The Button When Click Get Kmers -->
+                    <input id="kmers" type="button" value="Get K-mers " name="kmers">
+                    <!-- End Button -->
+                    <br>
+                    <!-- Kmers Output-->
+                    <output id="Kmer_Output"></output>
+
+                </div>
+                <!-- The Kmer Box End -->
+
+
+
+                <!-- The Complement Box Start -->
+                <div class="c">
+
+                    <!-- The Button When Click Gene Complement -->
+                    <input id="complement" type="button" value="Gene Complement " name="complement">
+                    <!-- End Button -->
+                    <br>
+                    <!-- Complement Output-->
+                    <output id="complement_Output"></output>
+
+                </div>
+                <!-- The complement Box End -->
+
+
+                <!-- The translate Box Start -->
+                <div class="t">
+
+                    <!-- The Button When Click Protein Translate -->
+                    <input id="translate" type="button" value="Protein Translation " name="translate">
+                    <!-- End Button -->
+                    <br>
+                    <!-- Protein Output-->
+                    <output id="translate_Output"></output>
+
+                </div>
+                <!-- The translate Box End -->
+
+            </div>
+            <!-- End Biological Box -->
+
+
+            <!-- GC Box Start -->
+            <div class="GC">
+
+                <!-- The Button When Click Calculate The GC Percentage -->
+                <input id="gc_content" type="button" value="Calc GC" name="GC">
+                <!-- End Button -->
+
+                <label for="GC">GC= </label>
+
+                <!-- GC Percentage -->
+                <output id="GC"></output>
+
+            </div>
+            <!-- GC Box End -->
+
+        </fieldset>
+    </form>
+    <!-- Biolgical Function Form End -->
+
+
+
+
+    <script>
+        let input1 = document.getElementById('choose_file')
+        let input2 = document.getElementById('choose_file2')
+
+        let textarea1 = document.getElementById('new_sequence')
+        let textarea2 = document.getElementById('new_sequence2')
+
+
+
+        input1.addEventListener('change', () => {
+            let files = input1.files;
+
+            if (files.length == 0) return;
+
+            /* If any further modifications have to be made on the
+               Extracted text. The text can be accessed using the
+               file variable. But since this is const, it is a read
+               only variable, hence immutable. To make any changes,
+               changing const to var, here and In the reader.onload
+               function would be advisible */
+            const file = files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = (e) => {
+                const file = e.target.result;
+
+                // This is a regular expression to identify carriage
+                // Returns and line breaks
+                // const lines = file.split(/\r\n|\n/);
+                textarea1.value = file;
+
+            };
+
+            reader.onerror = (e) => alert(e.target.error.name);
+
+            reader.readAsText(file);
+        });
+        // This event listener has been implemented to identify a
+        // Change in the input section of the html code
+        // It will be triggered when a file is chosen.
+        input2.addEventListener('change', () => {
+            let files = input2.files;
+
+            if (files.length == 0) return;
+
+            /* If any further modifications have to be made on the
+               Extracted text. The text can be accessed using the
+               file variable. But since this is const, it is a read
+               only variable, hence immutable. To make any changes,
+               changing const to var, here and In the reader.onload
+               function would be advisible */
+            const file = files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = (e) => {
+                const file = e.target.result;
+
+                // This is a regular expression to identify carriage
+                // Returns and line breaks
+                // const lines = file.split(/\r\n|\n/);
+                textarea2.value = file;
+
+            };
+
+            reader.onerror = (e) => alert(e.target.error.name);
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+
+
+</html>

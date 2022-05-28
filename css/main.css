@@ -1,0 +1,280 @@
+/* main css */
+body {
+    background-color: black;
+}
+
+p {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+fieldset {
+    border-radius: 10px;
+    /* background-color: #9FC088; */
+    background-color: #143355;
+}
+
+legend {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}
+
+label {
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    /* color: #614124; */
+    color: white;
+    font-weight: bolder;
+}
+
+/* End  */
+.choose_show {
+    margin: 50px;
+}
+
+.choose_show1 {
+    margin: 50px;
+}
+
+.generate_sequence {
+    margin: 50px;
+}
+
+/* choose file Button */
+.choose_file_button {
+    border: 1px solid black;
+    font-size: small;
+    padding: 7px 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    /* background-color: #CC704B; */
+    background-color: #147662;
+
+}
+
+/* The input file and the new genome */
+textarea {
+    border-radius: 4px;
+}
+
+.de_bruijn_box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(417px, 1fr));
+
+}
+
+/* the generate button  start */
+.button_generate {
+    text-align: center;
+    padding-top: 100px;
+    margin: 50px;
+}
+
+.button_generate input {
+    cursor: pointer;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: #147662;
+    padding: 12px 48px 12px 24px;
+    border-radius: 3px;
+    color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+}
+
+/* the generate button end */
+
+
+/* .Biolgical {
+    margin-top: 100px;
+} */
+
+.Biological_box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    /* border: 1px solid; */
+}
+
+
+
+/* Start N */
+#N_remove {
+    border: 1px solid black;
+    padding: 7px 50px;
+    border-radius: 4px;
+    font-family: 'Times New Roman',
+        Times,
+        serif;
+    font-weight: bold;
+    font-size: 14px;
+    width: 200px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #147662;
+    /* color: white; */
+}
+
+#N_Output {
+    display: block;
+    border: 1px solid #767676;
+    padding: 77px;
+    width: 441px;
+    border-radius: 4px;
+    background-color: white;
+    /* display: none; */
+    margin-top: 8px;
+}
+
+/* End N */
+
+/* Start kmer */
+#kmers {
+    border: 1px solid black;
+    padding: 7px 50px;
+    width: 200px;
+    text-align: center;
+    font-family: 'Times New Roman',
+        Times,
+        serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #147662;
+    /* color: white; */
+}
+
+#Kmer_Output {
+    display: block;
+    border: 1px solid #767676;
+    padding: 77px;
+    width: 441px;
+    border-radius: 4px;
+    background-color: white;
+    /* display: none; */
+    margin-top: 8px;
+}
+
+/* End kmer */
+
+
+/* Start Complement */
+#complement {
+    border: 1px solid black;
+    padding: 7px 50px;
+    width: 200px;
+    text-align: center;
+    font-family: 'Times New Roman',
+        Times,
+        serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #147662;
+    /* color: white; */
+}
+
+#complement_Output {
+    display: block;
+    border: 1px solid #767676;
+    padding: 77px;
+    width: 441px;
+    border-radius: 4px;
+    background-color: white;
+    /* display: none; */
+    margin-top: 8px;
+}
+
+/* End Complement */
+
+
+/* Start translate */
+#translate {
+    border: 1px solid black;
+    padding: 7px 50px;
+    width: 200px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #147662;
+    /* color: white; */
+}
+
+#translate_Output {
+    display: block;
+    border: 1px solid #767676;
+    padding: 77px;
+    width: 441px;
+    border-radius: 4px;
+    background-color: white;
+    /* display: none; */
+    margin-top: 8px;
+}
+
+/* End translate */
+
+
+
+/* start GC  */
+.GC {
+    /* margin-top: 10px; */
+    margin: 50px;
+    /* border-top: 1px solid; */
+}
+
+#gc_content {
+    border: 1px solid black;
+    padding: 7px 50px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: #147662;
+    color: white;
+    font-family: 'Times New Roman',
+        Times,
+        serif;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    /* font-size: medium; */
+}
+
+#GC {
+    border: 1px solid black;
+    padding: 7px 50px;
+    border-radius: 4px;
+    background-color: white;
+
+}
+
+/* End GC */
+
+
+.n,
+.k,
+.c,
+.t {
+    margin: 50px;
+    /* border-top: 1px solid; */
+}
